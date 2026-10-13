@@ -31,7 +31,7 @@ df["upsloping"] = (df["slope"] == 1).astype(int)
 df["flat"] = (df["slope"] == 2).astype(int)
 df["downsloping"] = (df["slope"] == 3).astype(int)
 
-df["ca"] = df["ca"].replace("?", pd.NA).astype(np.float64)
+df["ca"] = df["ca"].replace("?", np.nan).astype(np.float64)
 df["ca_s"] = (df["ca"] - df["ca"].mean()) / df["ca"].std()
 
 # one-hot encoding for thal
