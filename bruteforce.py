@@ -62,7 +62,7 @@ grid_search = GridSearchCV(
     estimator=KnnClassifier(),
     param_grid=param_grid,
     cv=5,
-    scoring="accuracy",
+    scoring="f1",
     n_jobs=-1
 )
 
